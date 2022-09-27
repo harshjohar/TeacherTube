@@ -4,6 +4,7 @@ import ClassTile from '../components/classroom/ClassTile'
 import styles from './Dashboard.module.css'
 import Classroom from './Classroom'
 import Class from '../models/class'
+import NotFound from './NotFound'
 
 function Dashboard() {
     const classesList: Class[] = [
@@ -31,6 +32,7 @@ function Dashboard() {
                 <Route path='/dashboard/class'>
                     <Classroom />
                 </Route>
+                <Route path='*'><NotFound /></Route>
             </Switch>
         </>
     )
